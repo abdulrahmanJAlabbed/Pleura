@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-const search = () => {
+const saved = () => {
   return (
     <View>
-      <Text>search</Text>
+      <Text>saved</Text>
     </View>
   );
 };
 
-export default search;
+export default saved;

@@ -1,4 +1,3 @@
-import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function Index() {
@@ -6,13 +5,11 @@ export default function Index() {
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "cyan",
       }}
     >
-      <Text>Welcome to pleura</Text>
-      <Link href="/search">search</Link>
-      <Link href="/[avatar]">avatar</Link>
+      <Text className="text-4xl mt-10 text-purple-700">Welcome to pleura</Text>
     </View>
   );
 }
