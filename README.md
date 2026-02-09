@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+# 🎬 Pleura - Next Gen Movie & TV Streaming App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Pleura Banner](/path/to/banner-image.png)
 
-## Get started
+Pleura is a cutting-edge movie and TV show tracking application built with **React Native (Expo)** and **Firebase**. It offers a premium, immersive experience with a sleek dark-mode UI, real-time data from TMDB, and robust user authentication.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+### 🔐 Advanced Authentication
 
-   ```bash
-   npx expo start
-   ```
+- **Phone Number Login**: Secure, OTP-based authentication.
+- **Smart User Detection**: Automatically detects existing users to skip OTP and prompt for password.
+- **Password & Profile Setup**: Seamless flow for new users to set up credentials and profile (Name + Avatar).
+- **Guest Mode**: Explore the app with limited features.
+- **Guest Restrictions**: intelligent blocking of actions like "Save to My List" for guest users.
 
-In the output, you'll find options to open the app in a
+### 🎥 Content Discovery
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Hero Section**: Dynamic, auto-rotating featured content with genre-based color theming.
+- **Media Details**: Rich details pages for Movies and TV Shows with trailers, cast, and server selection.
+- **Search**: Powerful search functionality to find your favorite content.
+- **Categories**: Browse by "Now Playing", "Top Rated", "Anime", and more.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 💾 Personalization
 
-## Get a fresh project
+- **My List**: Save your favorite movies and shows to your personal library (persisted to Firestore).
+- **Profile Management**: customizable user profiles.
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 📱 Screenshots
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+|                  Login / Auth                  |                 Home Screen                  |                Movie Details                 |
+| :--------------------------------------------: | :------------------------------------------: | :------------------------------------------: |
+| ![Login Screen](/path/to/login-screenshot.png) | ![Home Screen](/path/to/home-screenshot.png) | ![Movie Details](/path/to/movie-details.png) |
 
-## Learn more
+|                Profile Setup                 |                      Search                      |               TV Details               |
+| :------------------------------------------: | :----------------------------------------------: | :------------------------------------: |
+| ![Profile Setup](/path/to/profile-setup.png) | ![Search Screen](/path/to/search-screenshot.png) | ![TV Details](/path/to/tv-details.png) |
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🛠️ Tech Stack
 
-## Join the community
+- **Framework**: [React Native](https://reactnative.dev/) with [Expo](https://expo.dev/)
+- **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/)
+- **Backend/Auth**: [Firebase](https://firebase.google.com/) (Auth + Firestore)
+- **Data Source**: [TMDB API](https://www.themoviedb.org/)
+- **UI/Styling**: Custom styles with `StyleSheet`, `LinearGradient`, and `Lottie` animations.
+- **State Management**: React Context API (`AuthContext`).
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- Expo CLI
+- Firebase Project (configured with Phone Auth and Firestore)
+
+### Installation
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone https://github.com/yourusername/pleura.git
+    cd pleura
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Configure Firebase**
+    - Create a `configs/firebaseConfig.ts` file with your Firebase credentials.
+
+4.  **Run the app**
+    ```bash
+    npx expo start
+    ```
+
+---
+
+## 🐛 Known Issues / To-Do
+
+- [ ] Add more comprehensive error handling for network offline states.
+- [ ] Implement "Forgot Password" UI polish.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+---
+
+**Pleura** © 2026. Made with ❤️ by Cella.
