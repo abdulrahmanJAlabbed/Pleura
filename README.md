@@ -1,6 +1,6 @@
 # 🎬 Pleura - Next Gen Movie & TV Streaming App
 
-![Pleura Banner](assets/images/banner_placeholder.png)
+![Pleura Banner](assets/images/12.jpg)
 
 **Pleura** is a cutting-edge movie and TV show tracking application built with **React Native (Expo)** and **Firebase**. It offers a premium, immersive experience with a sleek dark-mode UI, real-time data from TMDB, and robust user authentication.
 
@@ -47,20 +47,6 @@ Prefer a classic install? Download the APK file directly.
 
 - **My List**: Save your favorite movies and shows.
 - **Profile Management**: Customizable user profiles.
-
----
-
-## 📱 Screenshots
-
-|                 Login / Auth                 |                Home Screen                 |                  Movie Details                   |
-| :------------------------------------------: | :----------------------------------------: | :----------------------------------------------: |
-| ![Login](assets/images/screenshot_login.png) | ![Home](assets/images/screenshot_home.png) | ![Details](assets/images/screenshot_details.png) |
-
-|                  Profile Setup                   |                     Search                     |                TV Shows                |
-| :----------------------------------------------: | :--------------------------------------------: | :------------------------------------: |
-| ![Profile](assets/images/screenshot_profile.png) | ![Search](assets/images/screenshot_search.png) | ![TV](assets/images/screenshot_tv.png) |
-
----
 
 ## 🛠️ Developer Guide
 
