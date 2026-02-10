@@ -14,7 +14,7 @@ Now available as a **Progressive Web App (PWA)** for instant access on any devic
 
 Why install? Just visit the website and add it to your home screen for a full native app experience.
 
-👉 **[Launch Pleura](https://alabed.work/pleura-new/APP)** 👈
+👉 **[Launch Pleura](https://alabed.work/pleura-new/App/)** 👈
 
 **Installation:**
 
