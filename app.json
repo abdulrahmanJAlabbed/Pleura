@@ -22,7 +22,10 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/favicon/favicon-32x32.png"
+      "favicon": "./assets/favicon/favicon-32x32.png",
+      "display": "standalone",
+      "startUrl": "/",
+      "backgroundColor": "#030014"
     },
     "plugins": [
       "expo-router",
@@ -41,7 +44,8 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": true,
+      "baseUrl": "/pleura-new/App"
     }
   }
 }

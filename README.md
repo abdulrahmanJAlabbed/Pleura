@@ -1,8 +1,31 @@
 # 🎬 Pleura - Next Gen Movie & TV Streaming App
 
-![Pleura Banner](/path/to/banner-image.png)
+![Pleura Banner](assets/images/banner_placeholder.png)
 
-Pleura is a cutting-edge movie and TV show tracking application built with **React Native (Expo)** and **Firebase**. It offers a premium, immersive experience with a sleek dark-mode UI, real-time data from TMDB, and robust user authentication.
+**Pleura** is a cutting-edge movie and TV show tracking application built with **React Native (Expo)** and **Firebase**. It offers a premium, immersive experience with a sleek dark-mode UI, real-time data from TMDB, and robust user authentication.
+
+Now available as a **Progressive Web App (PWA)** for instant access on any device.
+
+---
+
+## 📥 Get started
+
+### 🌐 Web App (PWA) - Recommended
+
+Why install? Just visit the website and add it to your home screen for a full native app experience.
+
+👉 **[Launch Pleura](https://alabed.work/pleura-new/APP)** 👈
+
+**Installation:**
+
+- **iOS:** Open in Safari -> Tap **Share** -> **Add to Home Screen**.
+- **Android:** Open in Chrome -> Tap **Install App** or **Add to Home Screen**.
+
+### 📱 Android (APK)
+
+Prefer a classic install? Download the APK file directly.
+
+- [Download APK](https://alabed.work/pleura-new/APP/app.apk)
 
 ---
 
@@ -11,85 +34,86 @@ Pleura is a cutting-edge movie and TV show tracking application built with **Rea
 ### 🔐 Advanced Authentication
 
 - **Phone Number Login**: Secure, OTP-based authentication.
-- **Smart User Detection**: Automatically detects existing users to skip OTP and prompt for password.
-- **Password & Profile Setup**: Seamless flow for new users to set up credentials and profile (Name + Avatar).
-- **Guest Mode**: Explore the app with limited features.
-- **Guest Restrictions**: intelligent blocking of actions like "Save to My List" for guest users.
+- **Smart User Detection**: Automatically detects existing users.
+- **Guest Mode**: Explore without signing up.
 
 ### 🎥 Content Discovery
 
-- **Hero Section**: Dynamic, auto-rotating featured content with genre-based color theming.
-- **Media Details**: Rich details pages for Movies and TV Shows with trailers, cast, and server selection.
-- **Search**: Powerful search functionality to find your favorite content.
-- **Categories**: Browse by "Now Playing", "Top Rated", "Anime", and more.
+- **Hero Section**: Dynamic, auto-rotating featured content.
+- **Media Details**: Rich details with trailers, cast, and more.
+- **Search**: Powerful search functionality.
 
 ### 💾 Personalization
 
-- **My List**: Save your favorite movies and shows to your personal library (persisted to Firestore).
-- **Profile Management**: customizable user profiles.
+- **My List**: Save your favorite movies and shows.
+- **Profile Management**: Customizable user profiles.
 
 ---
 
 ## 📱 Screenshots
 
-|                  Login / Auth                  |                 Home Screen                  |                Movie Details                 |
-| :--------------------------------------------: | :------------------------------------------: | :------------------------------------------: |
-| ![Login Screen](/path/to/login-screenshot.png) | ![Home Screen](/path/to/home-screenshot.png) | ![Movie Details](/path/to/movie-details.png) |
+|                 Login / Auth                 |                Home Screen                 |                  Movie Details                   |
+| :------------------------------------------: | :----------------------------------------: | :----------------------------------------------: |
+| ![Login](assets/images/screenshot_login.png) | ![Home](assets/images/screenshot_home.png) | ![Details](assets/images/screenshot_details.png) |
 
-|                Profile Setup                 |                      Search                      |               TV Details               |
-| :------------------------------------------: | :----------------------------------------------: | :------------------------------------: |
-| ![Profile Setup](/path/to/profile-setup.png) | ![Search Screen](/path/to/search-screenshot.png) | ![TV Details](/path/to/tv-details.png) |
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework**: [React Native](https://reactnative.dev/) with [Expo](https://expo.dev/)
-- **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/)
-- **Backend/Auth**: [Firebase](https://firebase.google.com/) (Auth + Firestore)
-- **Data Source**: [TMDB API](https://www.themoviedb.org/)
-- **UI/Styling**: Custom styles with `StyleSheet`, `LinearGradient`, and `Lottie` animations.
-- **State Management**: React Context API (`AuthContext`).
+|                  Profile Setup                   |                     Search                     |                TV Shows                |
+| :----------------------------------------------: | :--------------------------------------------: | :------------------------------------: |
+| ![Profile](assets/images/screenshot_profile.png) | ![Search](assets/images/screenshot_search.png) | ![TV](assets/images/screenshot_tv.png) |
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Developer Guide
 
-### Prerequisites
+Want to contribute? Check out our **[CONTRIBUTING.md](CONTRIBUTING.md)** guide.
 
-- Node.js (v18+)
-- Expo CLI
-- Firebase Project (configured with Phone Auth and Firestore)
+### Tech Stack
 
-### Installation
+- **Framework**: React Native (Expo)
+- **Backend**: Firebase (Auth + Firestore)
+- **Data**: TMDB API
+- **Styling**: Custom StyleSheet + LinearGradient
 
-1.  **Clone the repository**
+### Local Development
 
-    ```bash
-    git clone https://github.com/yourusername/pleura.git
-    cd pleura
-    ```
+```bash
+# Clone
+git clone https://github.com/your-username/pleura.git
 
-2.  **Install dependencies**
+# Install
+npm install
 
-    ```bash
-    npm install
-    ```
-
-3.  **Configure Firebase**
-    - Create a `configs/firebaseConfig.ts` file with your Firebase credentials.
-
-4.  **Run the app**
-    ```bash
-    npx expo start
-    ```
+# Run
+npx expo start
+```
 
 ---
 
-## 🐛 Known Issues / To-Do
+## 🚀 Deployment (Self-Hosting)
 
-- [ ] Add more comprehensive error handling for network offline states.
-- [ ] Implement "Forgot Password" UI polish.
+Host your own version of Pleura on any static file server (Nginx, Apache, Vercel, etc.).
+
+### 1. Build the PWA
+
+```bash
+npm run build:web
+```
+
+This generates a `dist` folder with the static files.
+
+### 2. Configure Nginx
+
+If deploying to a subdirectory (e.g., `/pleura-new/APP`), update `app.json` `baseUrl` first, then add this to your Nginx config:
+
+```nginx
+location /pleura-new/APP/ {
+    alias /var/www/portfolio/pleura-new/APP/;
+    try_files $uri $uri/ /pleura-new/APP/index.html;
+}
+```
+
+### 3. Deploy
+
+Copy the `dist` folder contents to your server's web root defined in the alias above.
 
 ---
 
@@ -99,4 +123,4 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ---
 
-**Pleura** © 2026. Made with ❤️ by Cella.
+**Pleura** © 2026. Open Source Project.

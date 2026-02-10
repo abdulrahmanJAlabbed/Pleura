@@ -4,10 +4,12 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
+    "tunnel": "node scripts/start-tunnel.js",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "build:web": "npx expo export -p web",
     "lint": "expo lint"
   },
   "dependencies": {
